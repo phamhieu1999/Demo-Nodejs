@@ -8,7 +8,7 @@ const deleteCocktail = async(req,res)=>{
              data:null
          })
     } catch (error) {
-        res.status(404).json({
+        res.status(500).json({
             status:'fail',
             message:error
         })

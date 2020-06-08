@@ -7,7 +7,8 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
 // import routes
-
+const authUser = require('./routers/auth')
+app.use('/user',authUser)
 const cocktailRoute = require('./routers/cocktails')
 app.use('/cocktails',cocktailRoute)
 

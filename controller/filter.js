@@ -17,6 +17,7 @@ const getData = async (req, res) => {
             const queryObj = { ...req.query };
             let queryStr = JSON.stringify(queryObj)
             queryStr = queryStr.replace(/\b(gt|gte|lt|lte|eq|ne)\b/g, match => `$${match}`);
+        
             const cocktail = await Cocktail.find(JSON.parse(queryStr));
             if (cocktail) return res.status(200).json({
                 status: 'success',

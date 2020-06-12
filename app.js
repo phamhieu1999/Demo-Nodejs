@@ -3,13 +3,19 @@ const mongoose = require('mongoose')
 const app =  express()
 const bodyParser = require('body-parser')
 
+
+
 //import middlware
 app.use(bodyParser.json());
 
 // import routes
+const callRoute = require('./routers/callApi')
+app.use('/callApi',callRoute)
 
-const cocktailRoute = require('./routers/cocktails')
-app.use('/cocktails',cocktailRoute)
+const authUser = require('./routers/auth')
+app.use('/user',authUser)
+const drinkRoute = require('./routers/drinks')
+app.use('/drinks',drinkRoute)
 
 
 //Connected  database

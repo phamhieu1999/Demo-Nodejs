@@ -1,5 +1,5 @@
 const Cocktail = require('../model/Cocktail');
-const createCocktail = async(req,res)=>{
+module.exports.createCocktail = async(req,res)=>{
     const cocktail = new Cocktail({
         name:req.body.name,
         category:req.body.category,
@@ -20,4 +20,4 @@ const createCocktail = async(req,res)=>{
         })
     }
 }
-module.exports = createCocktail;
+// module.exports = createCocktail;

@@ -2,7 +2,7 @@
 const Cocktail = require('../model/Cocktail');
 
 
-const updateOneField = async (req, res) => {
+module.exports.updateOneField = async (req, res) => {
     try {
         const updateCocktail = await Cocktail.updateOne(
             { _id: req.params.cocktailId },
@@ -16,4 +16,4 @@ const updateOneField = async (req, res) => {
         })
     }
 }
-module.exports = updateOneField;
+// module.exports = updateOneField;

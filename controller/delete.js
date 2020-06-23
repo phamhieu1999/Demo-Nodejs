@@ -1,6 +1,6 @@
 const Cocktail = require('../model/Cocktail');
 
-const deleteCocktail = async (req, res) => {
+module.exports.deleteCocktail = async (req, res) => {
     try {
         await Cocktail.remove({ _id: req.params.cocktailId });
         res.status(200).json({
@@ -14,4 +14,4 @@ const deleteCocktail = async (req, res) => {
         })
     }
 }
-module.exports = deleteCocktail;
+// module.exports = deleteCocktail;

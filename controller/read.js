@@ -1,6 +1,6 @@
 
 const Cocktail = require('../model/Cocktail');
-module.exports.getId = async (req, res) => {
+const getId = async (req, res) => {
     try {
         const cocktail = await Cocktail.findById(req.params.cocktailId);
         if (cocktail) return res.status(200).json({
@@ -16,4 +16,4 @@ module.exports.getId = async (req, res) => {
 
     }
 }
-// module.exports = getId;
+module.exports = getId;

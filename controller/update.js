@@ -2,7 +2,7 @@ const Cocktail = require('../model/Cocktail');
 
 
 
-module.exports.updateAll = async (req, res) => {
+const updateAll = async (req, res) => {
     try {
         const id = req.params.cocktailId;
         const updateObject = req.body;
@@ -19,4 +19,4 @@ module.exports.updateAll = async (req, res) => {
     }
 }
 
-// module.exports = updateAll;
+module.exports = updateAll;
